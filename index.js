@@ -6,6 +6,7 @@
  */
 import React from 'react';
 import unquote from 'unquote';
+import propTypes from 'prop-types'
 
 /** TODO: Drop for React 16? */
 const ATTRIBUTE_TO_JSX_PROP_MAP = {
@@ -1593,12 +1594,12 @@ export default function Markdown({ children, options, ...props }) {
   return React.cloneElement(compiler(children, options), props);
 }
 
-// 暂时去除propTypes，特别是commonjs引入的
-// if (process.env.NODE_ENV !== 'production') {
-//   const PropTypes = require('prop-types');
+if (process.env.NODE_ENV !== 'production') {
+  // 换成 ESModule 引入，这里去掉
+  // const PropTypes = require('prop-types');
 
-//   Markdown.propTypes = {
-//     children: PropTypes.string.isRequired,
-//     options: PropTypes.object,
-//   };
-// }
+  Markdown.propTypes = {
+    children: PropTypes.string.isRequired,
+    options: PropTypes.object,
+  };
+}

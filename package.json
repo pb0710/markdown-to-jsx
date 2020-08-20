@@ -1,9 +1,9 @@
 {
-  "name": "markdown-to-jsx",
+  "name": "pb-markdown-to-jsx",
   "description": "Convert markdown to JSX with ease for React and React-like projects. Super lightweight and highly configurable.",
   "homepage": "https://probablyup.github.io/markdown-to-jsx",
   "license": "MIT",
-  "version": "6.11.4",
+  "version": "6.11.4.0",
   "engines": {
     "node": ">= 4"
   },
@@ -29,6 +29,7 @@
   "module": "dist/esm.js",
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.5.0",
+    "@types/markdown-to-jsx": "^6.11.1",
     "babel-cli": "^6.14.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^10.0.1",
