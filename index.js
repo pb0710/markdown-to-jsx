@@ -1593,11 +1593,12 @@ export default function Markdown({ children, options, ...props }) {
   return React.cloneElement(compiler(children, options), props);
 }
 
-if (process.env.NODE_ENV !== 'production') {
-  const PropTypes = require('prop-types');
+// 暂时去除propTypes，特别是commonjs引入的
+// if (process.env.NODE_ENV !== 'production') {
+//   const PropTypes = require('prop-types');
 
-  Markdown.propTypes = {
-    children: PropTypes.string.isRequired,
-    options: PropTypes.object,
-  };
-}
+//   Markdown.propTypes = {
+//     children: PropTypes.string.isRequired,
+//     options: PropTypes.object,
+//   };
+// }
