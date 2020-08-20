@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import unquote from 'unquote';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 /** TODO: Drop for React 16? */
 const ATTRIBUTE_TO_JSX_PROP_MAP = {
